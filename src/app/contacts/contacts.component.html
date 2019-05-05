@@ -1,0 +1,78 @@
+<!--<div class="container" style="margin-top: 20px;">
+  <div class="card">
+    <div class="card-header bg-info text-white">Contact Component</div>
+    <div class="card-body">
+      
+      <form #f="ngForm" (ngSubmit)="onSearch(f.value)">
+        <div class="form-group">
+          <label class="control-label">Numero Compteur</label>
+          <input required name="numero" ngModel type="text"
+            style="margin-top: 20px; margin-left: 30px;">
+          <button type="submit" class="btn btn-success"
+            style="margin-top: 2px; margin-left: 30px;">Rechercher</button>
+        </div>
+      </form>
+      
+  <div>
+    <h3>Liste des Factures</h3>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let c of tabItem">
+       
+      </li>
+    </ul>
+  </div>
+  
+    </div>
+  </div>
+</div>-->
+
+
+<div style="margin-left: 100px">
+  <div class="col-md-8 col-lg-offset-2">
+    <h1 class="display-4 text-center" style="height: 10px;margin-bottom: 80px;color: rgb(28, 116, 116)">CONSULTATION FACTURE
+    </h1>
+    <form #form="ngForm" autocomplete="off" (submit)="verif()">
+      <div class="form-group">
+        <label>Numero compteur</label>
+        <input type="email" class="form-control" placeholder="Enter Votre Code" name="champ" #champ="ngModel"
+          [(ngModel)]="me">
+      </div>
+
+      <button type="submit" class="btn btn-danger">Consulter</button>
+
+    </form>
+    <br>
+
+   
+    <tr *ngIf="alert1==1 || alert2==1">
+      <td>Mois:<input type="text" class="form-control" disabled style="width: 200px; margin-right: 20px"
+          [(ngModel)]="ui1" placeholder="Mois de payement"></td>
+      <td>Consommation:<input type="text" class="form-control" disabled style="width: 200px; margin-right: 20px"
+          [(ngModel)]="ui2" placeholder="Quantite"></td>
+      <td>Prix:<input type="text" class="form-control" style="width: 200px; margin-right: 20px" [(ngModel)]="ui3"
+          placeholder="Prix" disabled></td>
+      <td>Reglement:<input type="text" class="form-control" style="width: 200px; margin-right: 20px" [(ngModel)]="ui4"
+          placeholder="reglement" disabled></td>
+          <br><br />
+      
+      <td>Mois:<input type="text" class="form-control" disabled style="width: 200px; margin-right: 20px" [(ngModel)]="babs1"
+          placeholder="Mois de payement"></td>
+      <td>Consommation:<input type="text" class="form-control" disabled style="width: 200px; margin-right: 20px"
+          [(ngModel)]="babs2" placeholder="Quantite"></td>
+      <td>Prix:<input type="text" class="form-control" style="width: 200px; margin-right: 20px" [(ngModel)]="babs3"
+          placeholder="Prix" disabled></td>
+      <td>Reglement:<input type="text" class="form-control" style="width: 200px; margin-right: 20px" [(ngModel)]="babs4"
+          placeholder="reglement" disabled></td>
+
+      
+    </tr>
+    
+  </div>
+</div> 
+
+<!--<div id="theList">
+  <h2>The list</h2>
+  <ul>
+    <li *ngFor="let item of tabItem">{{item.mois}} | {{item.price}} </li>
+  </ul>
+</div> -->
